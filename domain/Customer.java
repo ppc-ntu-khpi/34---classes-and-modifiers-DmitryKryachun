@@ -11,10 +11,14 @@ public class Customer {
     }
 
     public void setID(int newID) {
-        ID = newID;
+      if( newID >= 0){
+        ID = newID;}
+      else{
+        System.out.println("Error: newID:"+newID +" < 0 ");
+      }
     }
 
-    public boolean isIsNew() {
+    public boolean getIsNew() {
         return isNew;
     }
 
@@ -27,7 +31,12 @@ public class Customer {
     }
 
     public void setTotal(double newTotal) {
+      if( newTotal >= 0){
         total = newTotal;
+      }
+      else{
+        System.out.println("Error: newTotal:"+newTotal +" < 0 ");
+      }
     }
     
     public void displayCustomerInfo(){
