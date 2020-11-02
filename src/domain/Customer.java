@@ -1,15 +1,4 @@
-## НА 5!
 
-Done
-
-![Done](https://github.com/ppc-ntu-khpi/34---classes-and-modifiers-DmitryKryachun/blob/main/Solution/done.jpg)
-
-
-Advanced
-
-
-![Advanced](https://github.com/ppc-ntu-khpi/34---classes-and-modifiers-DmitryKryachun/blob/main/Solution/advanced.jpg)
- ```
 package domain;
 
 public class Customer {
@@ -22,10 +11,14 @@ public class Customer {
     }
 
     public void setID(int newID) {
-        ID = newID;
+      if( newID >= 0){
+        ID = newID;}
+      else{
+        System.out.println("Error: newID:"+newID +" < 0 ");
+      }
     }
 
-    public boolean isIsNew() {
+    public boolean getIsNew() {
         return isNew;
     }
 
@@ -38,7 +31,12 @@ public class Customer {
     }
 
     public void setTotal(double newTotal) {
+      if( newTotal >= 0){
         total = newTotal;
+      }
+      else{
+        System.out.println("Error: newTotal:"+newTotal +" < 0 ");
+      }
     }
     
     public void displayCustomerInfo(){
@@ -53,4 +51,3 @@ public class Customer {
             
         }
 }
-```
